@@ -31,10 +31,34 @@ Response
 
 ### GET
 
+Request
+
+Response
+
 ### POST
+
+Request
+
+Response
 
 ## Pengembalian Barang
 
 ### GET
 
+Request
+
+Response
+
 ### POST
+
+Request
+
+Response
+
+## Chart Peminjaman Barang
+
+### GET
+
+Request
+
+Response
