@@ -17,6 +17,17 @@ Jika ingin melihat repositori yang sedang dikembangkan cek [disini](https://gith
 
 Berikut list Endpoint API per-feature
 
+## Authentikasi
+
+### GET
+
+Request
+
+Response
+
+### POST
+
+
 ## Pengecekan Barang
 
 ### GET
