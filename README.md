@@ -19,14 +19,43 @@ Berikut list Endpoint API per-feature
 
 ## Authentikasi
 
-### GET
+## GET
 
-Request
+**Request**
 
-Response
+**Response**
 
-### POST
+## POST : 
+### Register
 
+**Request**
+
+``` bash
+http://simanset.dev/api/v1/auth/register
+```
+
+Parameter
+
+Field | Type Data | Validation
+------------ | ------------- | -------------
+**name** | String | required
+**email** | String | required email
+**password** | String | required min:6
+
+**Response**
+
+``` json
+{
+    "data": {
+        "name": "rizki",
+        "email": "ramdani.rizki19@gmail.com",
+        "registered": "1 detik yang lalu"
+    },
+    "meta": {
+        "token": "$2y$10$l7\/CT7Plk2rI9bpWC\/wDHuwYUjI3Vd5wykCVsaJW3YbSj\/k46u01G"
+    }
+}
+```
 
 ## Pengecekan Barang
 
@@ -40,7 +69,7 @@ Response
 
 ## Peminjaman Barang
 
-### GET ALL DATA PEMINJAMAN
+### GET : List All Peminjaman
 
 Request
 
