@@ -26,22 +26,22 @@ Berikut list Endpoint API per-feature
 **Response**
 
 ## POST  
-### Register Users
+### Register User
 
->**Request**
+Request
 
 ``` bash
 http://simanset.dev/api/v1/auth/register
 ```
 
->**Header**
+Header
 
 Field | Value | 
 ------------ | ------------- 
 **Content-Type** | application/json 
 **Accept** | application/json 
 
->**Body**
+Body
 
 Field | Type Data | Validation
 ------------ | ------------- | -------------
@@ -49,7 +49,7 @@ Field | Type Data | Validation
 **email** | String | required email
 **password** | String | required min:6
 
->**Response**
+Response
 
 ``` json
 {
@@ -70,7 +70,38 @@ Field | Type Data | Validation
 
 Request
 
+``` bash
+http://apisimanset.dev/api/v1/inv-barang/detail/{id_inv_barang}
+```
+
+Header
+
+**none**
+
+Body
+
+
+**none**
+
 Response
+
+``` json
+{
+	"data": {
+		"petugas": "septian",
+		"detail": {
+			"inv_ruang_id": "INVB0012",
+			"nama_barang": "Leptop Acer",
+			"foto": "INVB0013.jpg",
+			"label_barang": "116\/III\/LAP.smk\/R.KTR\/2012",
+			"lokasi": "Ruang Kelas X TI 2",
+			"kondisi": "Rusak",
+			"tahun": 2015,
+			"tanggal_input": "20 jam yang lalu"
+		}
+	}
+}
+```
 
 ### POST
 
