@@ -66,6 +66,8 @@ Response
 
 ## Pengecekan Barang
 
+Barang yang dicek merupakan barang yang berada didalam ruangan kelas seperti meja, kursi, dll. 
+
 ## GET
 
 Request
@@ -112,7 +114,11 @@ Response
 
 ## Peminjaman Barang
 
-### GET : List All Peminjaman
+Barang yang dipinjam merupakan barang yang berada didalam kantor seperti infokus, terminal, leptop, bola, dll. 
+
+## GET
+
+### List All Peminjaman
 
 Request
 
