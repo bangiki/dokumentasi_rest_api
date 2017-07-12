@@ -66,7 +66,7 @@ Response
 
 ## Pengecekan Barang
 
-### GET
+## GET
 
 Request
 
@@ -80,26 +80,31 @@ Header
 
 Body
 
-
 **none**
+
+Parameter
+
+Param | Type Data | 
+------------ | ------------- 
+**id_inv_barang** | String 
 
 Response
 
 ``` json
 {
-	"data": {
-		"petugas": "septian",
-		"detail": {
-			"inv_ruang_id": "INVB0012",
-			"nama_barang": "Leptop Acer",
-			"foto": "INVB0013.jpg",
-			"label_barang": "116\/III\/LAP.smk\/R.KTR\/2012",
-			"lokasi": "Ruang Kelas X TI 2",
-			"kondisi": "Rusak",
-			"tahun": 2015,
-			"tanggal_input": "20 jam yang lalu"
-		}
-	}
+    "data": {
+        "petugas": "septian",
+        "detail": {
+            "inv_ruang_id": "INVB0012",
+            "nama_barang": "Leptop Acer",
+            "foto": "INVB0013.jpg",
+            "label_barang": "116\/III\/LAP.smk\/R.KTR\/2012",
+            "lokasi": "Ruang Kelas X TI 2",
+            "kondisi": "Rusak",
+            "tahun": 2015,
+            "tanggal_input": "20 jam yang lalu"
+        }
+    }
 }
 ```
 
