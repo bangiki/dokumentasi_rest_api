@@ -25,8 +25,8 @@ Berikut list Endpoint API per-feature
 
 **Response**
 
-## POST : 
-### Register
+## POST  
+> Register Users
 
 **Request**
 
@@ -34,7 +34,14 @@ Berikut list Endpoint API per-feature
 http://simanset.dev/api/v1/auth/register
 ```
 
-Parameter
+**Header**
+
+Field | Value | 
+------------ | ------------- 
+**Content-Type** | application/json 
+**Accept** | application/json 
+
+**Body**
 
 Field | Type Data | Validation
 ------------ | ------------- | -------------
