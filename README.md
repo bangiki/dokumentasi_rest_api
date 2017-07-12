@@ -26,22 +26,22 @@ Berikut list Endpoint API per-feature
 **Response**
 
 ## POST  
-> Register Users
+### Register Users
 
-**Request**
+>**Request**
 
 ``` bash
 http://simanset.dev/api/v1/auth/register
 ```
 
-**Header**
+>**Header**
 
 Field | Value | 
 ------------ | ------------- 
 **Content-Type** | application/json 
 **Accept** | application/json 
 
-**Body**
+>**Body**
 
 Field | Type Data | Validation
 ------------ | ------------- | -------------
@@ -49,7 +49,7 @@ Field | Type Data | Validation
 **email** | String | required email
 **password** | String | required min:6
 
-**Response**
+>**Response**
 
 ``` json
 {
