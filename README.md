@@ -116,9 +116,8 @@ Response
 
 Barang yang dipinjam merupakan barang yang berada didalam kantor seperti infokus, terminal, leptop, bola, dll. 
 
+## List All Peminjaman
 ## GET
-
-### List All Peminjaman
 
 Request
 
@@ -168,12 +167,70 @@ Response
     ]        
 }
 ```
-
-### POST
+## Store Peminjaman
+## POST
 
 Request
 
+``` bash
+http://apisimanset.trycatch.id/api/v1/peminjaman/save
+```
+
+Header
+
+Field | Value | 
+------------ | ------------- 
+**Content-Type** | application/json 
+**Accept** | application/json 
+
+Body
+
+Field | Type Data | Validation
+------------ | ------------- | -------------
+**nis** | String | -
+**petugas** | String | -
+**uuid** | String | -
+**waktu_pinjam** | String | -
+**barang** | Array | -
+
+Format JSON Body
+
+``` json
+{
+    "barang":[
+        {
+            "date":"Jul 13, 2017 9:08:14 PM",
+            "id":1,
+            "kode_barang":"INVB0010",
+            "kondisi_barang":"Baik",
+            "label_barang":"115/III/LAP.smk/R.KTR/2012",
+            "lokasi_barang":"-",
+            "nama_barang":"Sound System Span",
+            "type":"TEXT"
+        }],
+    "nama":"Astria Handayani",
+    "nis":10150159,
+    "petugas":1,
+    "uuid":0,
+    "waktu_pinjam":"3 bulan yang lalu"
+}
+```
+
+
 Response
+
+``` json
+{
+    "data": {
+        "name": "rizki",
+        "email": "ramdani.rizki19@gmail.com",
+        "registered": "1 detik yang lalu"
+    },
+    "meta": {
+        "token": "$2y$10$l7\/CT7Plk2rI9bpWC\/wDHuwYUjI3Vd5wykCVsaJW3YbSj\/k46u01G"
+    }
+}
+```
 
 ## Pengembalian Barang
 
