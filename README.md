@@ -164,8 +164,8 @@ Response
             "waktu_pinjam": "3 bulan yang lalu",
             "petugas": 1,
             "keterangan": "barang telah kembali"
-        },
-        ......
+        }
+    ]        
 }
 ```
 
