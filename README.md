@@ -207,7 +207,18 @@ Format JSON Body
             "lokasi_barang":"-",
             "nama_barang":"Sound System Span",
             "type":"TEXT"
-        }],
+        },
+        {
+            "date":"Jul 13, 2017 9:08:14 PM",
+            "id":1,
+            "kode_barang":"INVB0002",
+            "kondisi_barang":"Baik",
+            "label_barang":"115/III/LAP.smk/R.KTR/2012",
+            "lokasi_barang":"-",
+            "nama_barang":"Sound System Span",
+            "type":"TEXT"
+        }
+        ],
     "nama":"Astria Handayani",
     "nis":10150159,
     "petugas":1,
@@ -221,14 +232,8 @@ Response
 
 ``` json
 {
-    "data": {
-        "name": "rizki",
-        "email": "ramdani.rizki19@gmail.com",
-        "registered": "1 detik yang lalu"
-    },
-    "meta": {
-        "token": "$2y$10$l7\/CT7Plk2rI9bpWC\/wDHuwYUjI3Vd5wykCVsaJW3YbSj\/k46u01G"
-    }
+	"pesan": "sukses",
+	"error": false
 }
 ```
 
@@ -337,5 +342,79 @@ Response
         "status": "aktif",
         "created_at": "3 bulan yang lalu"
     }
+}
+```
+``` json
+{
+    "data": {
+        "nis": 10150171,
+        "nama": "Dinda Ayu Syafitri",
+        "kelas": "XI RPL 3",
+        "jurusan": "Rekayasa Perangkat Lunak",
+        "semester": 1,
+        "photo": "",
+        "status": "aktif",
+        "created_at": "3 bulan yang lalu"
+    }
+}
+```
+
+## Store Pengembalian
+## POST
+
+Request
+
+``` bash
+http://apisimanset.trycatch.id/api/v1/pengembalian/save
+```
+
+Header
+
+Field | Value | 
+------------ | ------------- 
+**Content-Type** | application/json 
+**Accept** | application/json 
+
+Body
+
+Field | Type Data | Validation
+------------ | ------------- | -------------
+**nis** | String | -
+**petugas** | String | -
+**uuid_pinjam** | String | -
+**barang** | Array | -
+
+Format Body
+
+``` json
+{
+    "barang":[
+        {
+            "kode_barang":"INVB0010",
+            "kondisi_barang":"Baik",
+            "label_barang":"115/III/LAP.smk/R.KTR/2012",
+            "lokasi_barang":"-",
+            "nama_barang":"Sound System Span"
+        },
+        {
+            "kode_barang":"INVB0002",
+            "kondisi_barang":"Baik",
+            "label_barang":"111/III/LAP.smk/R.KTR/2012",
+            "lokasi_barang":"Ruang Kelas X TI 1",
+            "nama_barang":"Sound System Toshiba"
+        }
+    ],
+    "nis":10150159,
+    "petugas":1,
+    "uuid_pinjam":"bab81d8e-67d6-11e7-89eb-2c1f3ddcc75b"
+}
+
+```
+
+Response
+``` json
+{
+    "pesan": "data berhasil dikembalikan",
+    "error": false
 }
 ```
