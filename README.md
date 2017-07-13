@@ -116,9 +116,9 @@ Response
 
 Barang yang dipinjam merupakan barang yang berada didalam kantor seperti infokus, terminal, leptop, bola, dll. 
 
-### List All Peminjaman
-
 ## GET
+
+### List All Peminjaman
 
 Request
 
@@ -177,17 +177,56 @@ Response
 
 ## Pengembalian Barang
 
-### GET
+## GET
 
 Request
 
+``` bash
+http://apisimanset.trycatch.id/api/v1/peminjaman/all/{id_petugas}
+```
+
+Header
+
+**none**
+
+Body
+
+**none**
+
+Parameter
+
+Param | Type Data | 
+------------ | ------------- 
+**id_petugas** | Integer 
+
 Response
 
-### POST
-
-Request
-
-Response
+``` json
+{
+    "data": [
+        {
+            "uuid_pinjam": "33c8660e-1e97-11e7-9155-75a5a6462ab5",
+            "nis": 85892740,
+            "nama": "Ismi Widiastuti",
+            "kelas": "XI RPL 3",
+            "date_pinjam": "2017-04-11 16:14:01",
+            "waktu_pinjam": "3 bulan yang lalu",
+            "petugas": 1,
+            "keterangan": "saya pinjam barang"
+        },
+        {
+            "uuid_pinjam": "f33c69ae-0fd8-11e7-ba84-f45565668763",
+            "nis": 85892740,
+            "nama": "Ismi Widiastuti",
+            "kelas": "XI RPL 3",
+            "date_pinjam": "2017-03-23 21:56:52",
+            "waktu_pinjam": "3 bulan yang lalu",
+            "petugas": 1,
+            "keterangan": "barang telah kembali"
+        }
+    ]        
+}
+```
 
 ## Chart Peminjaman Barang
 
@@ -196,3 +235,50 @@ Response
 Request
 
 Response
+
+## Siswa
+
+Aktor peminjam barang
+
+## Detail Siswa
+
+menampilkan detail siswa berdasarkan nis
+
+## GET
+
+Request
+
+``` bash
+http://apisimanset.trycatch.id/api/v1/siswa/detail/{nis}
+```
+
+Header
+
+**none**
+
+Body
+
+**none**
+
+Parameter
+
+Param | Type Data | 
+------------ | ------------- 
+**nis** | Integer 
+
+Response
+
+``` json
+{
+    "data": {
+        "nis": 10150171,
+        "nama": "Dinda Ayu Syafitri",
+        "kelas": "XI RPL 3",
+        "jurusan": "Rekayasa Perangkat Lunak",
+        "semester": 1,
+        "photo": "",
+        "status": "aktif",
+        "created_at": "3 bulan yang lalu"
+    }
+}
+```
