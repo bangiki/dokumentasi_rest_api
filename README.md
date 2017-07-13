@@ -116,27 +116,57 @@ Response
 
 Barang yang dipinjam merupakan barang yang berada didalam kantor seperti infokus, terminal, leptop, bola, dll. 
 
-## GET
-
 ### List All Peminjaman
+
+## GET
 
 Request
 
 ``` bash
-http://apisimanset.dev/api/v1/peminjaman/all
+http://apisimanset.trycatch.id/api/v1/peminjaman/all/{id_petugas}
 ```
+
+Header
+
+**none**
+
+Body
+
+**none**
 
 Parameter
 
-First Header | Second Header
------------- | -------------
-Content from cell 1 | Content from cell 2
-Content in the first column | Content in the second column
+Param | Type Data | 
+------------ | ------------- 
+**id_petugas** | Integer 
 
 Response
 
 ``` json
-http://apisimanset.dev/api/v1/peminjaman/all
+{
+    "data": [
+        {
+            "uuid_pinjam": "33c8660e-1e97-11e7-9155-75a5a6462ab5",
+            "nis": 85892740,
+            "nama": "Ismi Widiastuti",
+            "kelas": "XI RPL 3",
+            "date_pinjam": "2017-04-11 16:14:01",
+            "waktu_pinjam": "3 bulan yang lalu",
+            "petugas": 1,
+            "keterangan": "saya pinjam barang"
+        },
+        {
+            "uuid_pinjam": "f33c69ae-0fd8-11e7-ba84-f45565668763",
+            "nis": 85892740,
+            "nama": "Ismi Widiastuti",
+            "kelas": "XI RPL 3",
+            "date_pinjam": "2017-03-23 21:56:52",
+            "waktu_pinjam": "3 bulan yang lalu",
+            "petugas": 1,
+            "keterangan": "barang telah kembali"
+        },
+        ......
+}
 ```
 
 ### POST
