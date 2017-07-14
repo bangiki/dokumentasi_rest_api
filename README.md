@@ -110,6 +110,56 @@ Response
 }
 ```
 
+## GET
+
+Request
+
+``` bash
+http://apisimanset.dev/api/v1/inv-barang-ruang/detail/{id_inv_ruang}
+```
+
+Header
+
+**none**
+
+Body
+
+**none**
+
+Parameter
+
+Param | Type Data | 
+------------ | ------------- 
+**id_inv_ruang** | String 
+
+Example
+
+``` bash
+http://apisimanset.trycatch.id/api/v1/inv-barang-ruang/detail/INVR0002
+```
+
+
+Response
+
+``` json
+{
+    "data": {
+        "petugas": "septian",
+        "detail": {
+            "inv_ruang_id": "INVR0002",
+            "nama_barang": "Meja Kayu & Besi",
+            "foto": "INVR0003.jpg",
+            "label_barang": "111\/III\/LAP.smk\/R.KTR\/2012",
+            "jenis": "Kelengkapan",
+            "lokasi": "Ruang Kelas X TI 2",
+            "kondisi": "Rusak",
+            "tahun": "2015",
+            "tanggal_input": "4 bulan yang lalu"
+        }
+    }
+}
+```
+
 ### POST
 
 ## Peminjaman Barang
@@ -167,6 +217,50 @@ Response
     ]        
 }
 ```
+## Get Item Peminjaman
+## GET
+
+Request
+
+``` bash
+http://apisimanset.trycatch.id/api/v1/peminjaman/item/{uuid}
+```
+
+Header
+
+**none**
+
+Body
+
+**none**
+
+Parameter
+
+Param | Type Data | 
+------------ | ------------- 
+**uuid** | String 
+
+Example
+``` bash
+http://apisimanset.trycatch.id/api/v1/peminjaman/item/91e9ae2c-67d6-11e7-af48-277366abe596
+```
+
+Response
+
+``` json
+{
+    "data": [
+        {
+            "kode_barang": "INVB0010",
+            "nama_barang": "Sound System Span",
+            "label_barang": "115\/III\/LAP.smk\/R.KTR\/2012",
+            "lokasi_barang": "-",
+            "kondisi_barang": "Baik"
+        }
+    ]
+}
+```
+
 ## Store Peminjaman
 ## POST
 
