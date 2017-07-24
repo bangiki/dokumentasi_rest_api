@@ -17,8 +17,8 @@ Jika ingin melihat repositori yang sedang dikembangkan cek [disini](https://gith
 
 Berikut list Endpoint API per-feature
 
-- [Register User]()
-- [Auth User]()
+- [Register User](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#register-user)
+- [Auth User](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#auth-user)
 - [Pengecekan Barang]()
 - [Pengecekan Siswa]()
 - [Peminjaman Barang]()
@@ -70,7 +70,7 @@ Response
 }
 ```
 
-### Login User
+### Auth User
 
 URL Request
 
