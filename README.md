@@ -17,21 +17,26 @@ Jika ingin melihat repositori yang sedang dikembangkan cek [disini](https://gith
 
 Berikut list Endpoint API per-feature
 
+- [Register User]()
+- [Auth User]()
+- [Pengecekan Barang]()
+- [Pengecekan Siswa]()
+- [Peminjaman Barang]()
+- [Pengembalian Barang]()
+
 ## Authentikasi
-
-## GET
-
-**Request**
-
-**Response**
 
 ## POST  
 ### Register User
 
-Request
+URL Request
 
 ``` bash
-http://simanset.dev/api/v1/auth/register
+//local
+http://apisimanset.dev/api/v1/auth/register
+
+//production
+http://apisimanset.trycatch.id/api/v1/auth/register
 ```
 
 Header
@@ -48,19 +53,66 @@ Field | Type Data | Validation
 **name** | String | required
 **email** | String | required email
 **password** | String | required min:6
+**level** | 1 | required
+
 
 Response
 
 ``` json
 {
-    "data": {
-        "name": "rizki",
-        "email": "ramdani.rizki19@gmail.com",
-        "registered": "1 detik yang lalu"
-    },
-    "meta": {
-        "token": "$2y$10$l7\/CT7Plk2rI9bpWC\/wDHuwYUjI3Vd5wykCVsaJW3YbSj\/k46u01G"
-    }
+	"data": {
+		"id": 5,
+		"name": "rizki",
+		"email": "ramdani3@gmail.com",
+		"level": 0,
+		"registered": "1 second ago"
+	}
+}
+```
+
+### Login User
+
+URL Request
+
+``` bash
+//local
+http://apisimanset.dev/api/v1/auth/login
+
+//production
+http://apisimanset.trycatch.id/api/v1/auth/login
+```
+
+Header
+
+Field | Value | 
+------------ | ------------- 
+**Content-Type** | application/json 
+**Accept** | application/json 
+
+Body
+
+Field | Type Data | Validation
+------------ | ------------- | -------------
+**email** | String | required email
+**password** | String | required min:6
+
+Response
+
+``` json
+{
+	"data": {
+		"id": 3,
+		"name": "rizki",
+		"email": "ramdani@gmail.com",
+		"level": 0,
+		"registered": "55 minutes ago",
+		"pinjams": {
+			"data": []
+		}
+	},
+	"meta": {
+		"token": "Ym53aVdTVXpsY2Z0dkk0dGJQNjVIOGgzUUo5cE1mTnR3UFo5Yk5UeA=="
+	}
 }
 ```
 
