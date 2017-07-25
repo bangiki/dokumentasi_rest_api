@@ -252,9 +252,9 @@ Response
 
 Peminjaman dilakukan dengan 3 Tahap
 
-1. Scan Kartu Pelajar
-2. Scan Barang yang akan dipinjam
-3. Store data siswa dan data barang yang akan dipinjam
+1. Scan Kartu Pelajar -> [Lihat API]()
+2. Scan Barang yang akan dipinjam -> [ Lihat API]()
+3. Store data siswa dan data barang yang akan dipinjam -> [ Lihat API]()
 
 ### POST
 
