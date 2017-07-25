@@ -150,6 +150,7 @@ http://apisimanset.trycatch.id/api/v1/inv-barang/detail/{id_inv_barang}
 ```
 
 Header
+
 Field | Value | 
 ------------ | ------------- 
 **Authorization** | String token 
