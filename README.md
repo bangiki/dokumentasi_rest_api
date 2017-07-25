@@ -31,11 +31,14 @@ Berikut list URL Endpoint API per-feature
 
 URL Request
 
+**Production**
 ``` bash
-//local
 http://apisimanset.dev/api/v1/auth/register
+```
 
-//production
+**Production**
+
+``` bash
 http://apisimanset.trycatch.id/api/v1/auth/register
 ```
 
@@ -74,13 +77,16 @@ Response
 
 URL Request
 
+
+**Local**
+
 ``` bash
-//local
 http://apisimanset.dev/api/v1/auth/login
 ```
 
+**Production**
+
 ``` bash
-//production
 http://apisimanset.trycatch.id/api/v1/auth/login
 ```
 
@@ -121,24 +127,25 @@ Response
 
 ## Pengecekan Barang
 
-Barang yang dicek merupakan barang yang berada didalam ruangan kelas seperti meja, kursi, dll. 
+Barang yang dicek merupakan barang yang berada didalam ruangan kelas seperti meja, kursi, dan lain-lain. 
 
 Pengecekan Barang dibagi 2 yaitu 
-- [Pengecekan Barang Inventaris]()
-- [Pengecekan Barang Pada Ruang]()
+- [Pengecekan Barang Inventaris](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#pengecekan-barang-inventaris)
+- [Pengecekan Barang Pada Ruang](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#pengecekan-barang-pada-ruang)
 
 ## Pengecekan Barang Inventaris
 
 ## GET
 
-Request
+URL Request
 
+**Local**
 ``` bash
 http://apisimanset.dev/api/v1/inv-barang/detail/{id_inv_barang}
 ```
 
+**Production**
 ``` bash
-//production
 http://apisimanset.trycatch.id/api/v1/inv-barang/detail/{id_inv_barang}
 ```
 
@@ -188,16 +195,19 @@ Response
 
 URL Request
 
+
+**Local**
 ``` bash
 http://apisimanset.dev/api/v1/inv-barang-ruang/detail/{id_inv_ruang}
 ```
 
+**Production**
 ``` bash
-//production
 http://apisimanset.trycatch.id/api/v1/inv-barang-ruang/detail/{id_inv_ruang}
 ```
 
 Header
+
 Field | Value | 
 ------------ | ------------- 
 **Authorization** | String token 
