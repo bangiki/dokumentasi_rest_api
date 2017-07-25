@@ -254,9 +254,9 @@ Peminjaman dilakukan dengan 3 Tahap
 
 1. Scan Kartu Pelajar -> [LihatAPI](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#siswa)
 2. Scan Barang yang akan dipinjam -> [Lihat API](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#pengecekan-barang-inventaris)
-3. Store data siswa dan data barang yang akan dipinjam -> [Lihat API](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#store-data-user-&-barang-pinjam)
-4. Lihat data semua peminjaman -> [Lihat API]()
-5. Lihat item pinjam berdasarkan user -> [Lihat API]()
+3. Store data siswa dan data barang yang akan dipinjam -> [Lihat API](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#store-data-user--barang-pinjam)
+4. Lihat data semua peminjaman -> [Lihat API](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#list-all-peminjaman)
+5. Lihat item pinjam berdasarkan user -> [Lihat API](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#get-list-item-peminjaman)
 
 ## Siswa
 
@@ -491,7 +491,7 @@ Response
 }
 ```
 
-## Get Item Peminjaman
+## Get List Item Peminjaman
 
 ## GET
 
