@@ -1,4 +1,4 @@
-# Dokumentasi API Endpoint
+# Dokumentasi API SIMANSET
 
 ## SIMAS ADI SANGGORO (Sistem Informasi Manajemen Aset Adi Sanggoro) 
 
@@ -13,16 +13,16 @@ Jika ingin melihat repositori yang sedang dikembangkan cek [disini](https://gith
 - Pengembalian Barang
 - Chart Barang Yang Sering Dipinjam
 
-## EndPoint
+## URL EndPoint
 
-Berikut list Endpoint API per-feature
+Berikut list URL Endpoint API per-feature
 
 - [Register User](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#register-user)
 - [Auth User](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#auth-user)
-- [Pengecekan Barang]()
-- [Pengecekan Siswa]()
-- [Peminjaman Barang]()
-- [Pengembalian Barang]()
+- [Pengecekan Barang](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#pengecekan-barang)
+- [Pengecekan Siswa](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#pengecekan-siswa)
+- [Peminjaman Barang](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#peminjaman-barang)
+- [Pengembalian Barang](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#pengembalian-barang)
 
 ## Authentikasi
 
@@ -77,10 +77,13 @@ URL Request
 ``` bash
 //local
 http://apisimanset.dev/api/v1/auth/login
+```
 
+``` bash
 //production
 http://apisimanset.trycatch.id/api/v1/auth/login
 ```
+
 
 Header
 
@@ -120,6 +123,12 @@ Response
 
 Barang yang dicek merupakan barang yang berada didalam ruangan kelas seperti meja, kursi, dll. 
 
+Pengecekan Barang dibagi 2 yaitu 
+- [Pengecekan Barang Inventaris]()
+- [Pengecekan Barang Pada Ruang]()
+
+## Pengecekan Barang Inventaris
+
 ## GET
 
 Request
@@ -128,9 +137,21 @@ Request
 http://apisimanset.dev/api/v1/inv-barang/detail/{id_inv_barang}
 ```
 
-Header
+``` bash
+//production
+http://apisimanset.trycatch.id/api/v1/inv-barang/detail/{id_inv_barang}
+```
 
-**none**
+Header
+Field | Value | 
+------------ | ------------- 
+**Authorization** | String token 
+
+Bulk Header
+
+``` bash
+Authorization: Bearer SFM3bE90NWF6NUlLRGk5aUR4czZtUTVwM0dHd1V0RzRpRHBFMTRYdw==
+```
 
 Body
 
@@ -147,7 +168,6 @@ Response
 ``` json
 {
     "data": {
-        "petugas": "septian",
         "detail": {
             "inv_ruang_id": "INVB0012",
             "nama_barang": "Leptop Acer",
@@ -162,17 +182,31 @@ Response
 }
 ```
 
+## Pengecekan Barang Pada Ruang
+
 ## GET
 
-Request
+URL Request
 
 ``` bash
 http://apisimanset.dev/api/v1/inv-barang-ruang/detail/{id_inv_ruang}
 ```
 
-Header
+``` bash
+//production
+http://apisimanset.trycatch.id/api/v1/inv-barang-ruang/detail/{id_inv_ruang}
+```
 
-**none**
+Header
+Field | Value | 
+------------ | ------------- 
+**Authorization** | String token 
+
+Bulk Header
+
+``` bash
+Authorization: Bearer SFM3bE90NWF6NUlLRGk5aUR4czZtUTVwM0dHd1V0RzRpRHBFMTRYdw==
+```
 
 Body
 
@@ -184,37 +218,34 @@ Param | Type Data |
 ------------ | ------------- 
 **id_inv_ruang** | String 
 
-Example
-
-``` bash
-http://apisimanset.trycatch.id/api/v1/inv-barang-ruang/detail/INVR0002
-```
-
-
 Response
 
 ``` json
 {
     "data": {
-        "petugas": "septian",
         "detail": {
-            "inv_ruang_id": "INVR0002",
-            "nama_barang": "Meja Kayu & Besi",
-            "foto": "INVR0003.jpg",
-            "label_barang": "111\/III\/LAP.smk\/R.KTR\/2012",
-            "jenis": "Kelengkapan",
+            "inv_ruang_id": "INVB0012",
+            "nama_barang": "Leptop Acer",
+            "foto": "INVB0013.jpg",
+            "label_barang": "116\/III\/LAP.smk\/R.KTR\/2012",
             "lokasi": "Ruang Kelas X TI 2",
             "kondisi": "Rusak",
-            "tahun": "2015",
-            "tanggal_input": "4 bulan yang lalu"
+            "tahun": 2015,
+            "tanggal_input": "20 jam yang lalu"
         }
     }
 }
 ```
 
-### POST
-
 ## Peminjaman Barang
+
+Peminjaman dilakukan dengan 3 Tahap
+
+1. Scan Kartu Pelajar
+2. Scan Barang yang akan dipinjam
+3. Store data siswa dan data barang yang akan dipinjam
+
+### POST
 
 Barang yang dipinjam merupakan barang yang berada didalam kantor seperti infokus, terminal, leptop, bola, dll. 
 
