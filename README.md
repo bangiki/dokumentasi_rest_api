@@ -574,6 +574,19 @@ http://apisimanset.dev/api/v1/pengembalian/history/all/{id_petugas}
 http://apisimanset.trycatch.id/api/v1/pengembalian/history/all/{id_petugas}
 ```
 
+> **Untuk akses web tidak perlu memakai token URL menjadi**
+
+
+**Local**
+``` bash
+http://apisimanset.dev/api/v1/pengembalian/history/all/no-token/{id_petugas}
+```
+
+**Production**
+
+``` bash
+http://apisimanset.trycatch.id/api/v1/pengembalian/history/all/no-token/{id_petugas}
+
 Header
 
 Field | Value | 
