@@ -15,3 +15,7 @@ RESTful API API Manajemen Aset dibangun menggunakan framework lumen 5.4.x
 
 Mobile Application - SMAS Scanner dibangun menggunakan native android dengan bahasa pemrogaman Java
 - Last Update - [https://gitlab.com/ramdanix/sapras-barcode-scanner-android-smk/tree/perbaikan](https://gitlab.com/ramdanix/sapras-barcode-scanner-android-smk/tree/perbaikan)
+
+## Example Login Android Repo With Navigation View
+
+- [https://gitlab.com/ramdanix/login-example-with-rest-api/tree/with_navigation_view](https://gitlab.com/ramdanix/login-example-with-rest-api/tree/with_navigation_view)
