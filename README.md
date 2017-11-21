@@ -29,12 +29,18 @@ Berikut list URL Endpoint API per-feature
 Berikut list Endpoint API per-feature
 
 ### Cek Barang
-- [GET - List Cek Barang History]
+
+- GET - List Cek Barang History
 
 ``` bash
 http://api.trycatch.id/api/v1/cekbarang/history/all/{petugas}
 ```
 
+- POST - Penyimpanan Cek Barang
+
+``` bash
+http://api.trycatch.id/api/v1/cekbarang/store
+```
 
 ## Authentikasi
 
