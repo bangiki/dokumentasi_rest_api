@@ -28,12 +28,32 @@ Berikut list URL Endpoint API per-feature
 
 Berikut list Endpoint API per-feature
 
+### Autentikasi
+
+- POST - Auth
+
+``` bash
+http://apisimanset.trycatch.id/api/v1/auth/login
+```
+
 ### Cek Barang
 
-- GET - List Cek Barang History
+- GET - List History Cek Barang 
 
 ``` bash
 http://api.trycatch.id/api/v1/cekbarang/history/all/{petugas}
+```
+
+-  GET - Detail Inventaris Ruang
+
+``` bash
+http://api.trycatch.id/api/v1/inv-barang-ruang/detail/{inv_ro_id}
+```
+
+-  GET - Detail Inventaris Barang
+
+``` bash
+http://api.trycatch.id/api/v1/inv-barang/detail/{kode_barang}
 ```
 
 - POST - Penyimpanan Cek Barang
@@ -41,6 +61,61 @@ http://api.trycatch.id/api/v1/cekbarang/history/all/{petugas}
 ``` bash
 http://api.trycatch.id/api/v1/cekbarang/store
 ```
+
+### Peminjaman Barang
+
+- GET - List History Peminjaman Barang
+
+``` bash
+http://api.trycatch.id/api/v1/peminjaman/history/all/{petugas}
+```
+
+- GET - List Item Peminjaman Barang
+
+``` bash
+http://api.trycatch.id/api/v1/peminjaman/item/{uuid}
+```
+
+- GET - Detail Data Siswa
+
+``` bash
+http://api.trycatch.id/api/v1/siswa/detail/{nis}
+```
+
+- POST - Penyimpanan Peminjaman Barang
+
+``` bash
+http://api.trycatch.id/api/v1/peminjaman/save
+```
+
+### Pengembalian Barang
+
+- GET - List History Pengembalian Barang 
+
+``` bash
+http://api.trycatch.id/api/v1/pengembalian/history/all/{petugas}
+```
+
+- GET - List Item Pengembalian Barang
+
+``` bash
+http://api.trycatch.id/api/v1/pengembalian/item/{uuid}
+```
+
+- POST - Penyimpanan Pengembalian Barang
+
+``` bash
+http://api.trycatch.id/api/v1/pengembalian/save
+```
+
+### Report Chart Barang Pinjam
+
+- GET - Report Barang Pinjam
+
+``` bash
+http://api.trycatch.id/api/v1/peminjaman/report/chart
+```
+
 
 ## Authentikasi
 
