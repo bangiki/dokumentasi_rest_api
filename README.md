@@ -24,6 +24,18 @@ Berikut list URL Endpoint API per-feature
 - [Pengembalian Barang](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#pengembalian-barang)
 - [Report Barang Pinjam (Chart)](https://github.com/ramdanix/dokumentasi_rest_api/blob/master/README.md#pengembalian-barang)
 
+## List Endpoint
+
+Berikut list Endpoint API per-feature
+
+### Cek Barang
+- [GET - List Cek Barang History]
+
+``` bash
+http://api.trycatch.id/api/v1/cekbarang/history/all/{petugas}
+```
+
+
 ## Authentikasi
 
 ## POST  
